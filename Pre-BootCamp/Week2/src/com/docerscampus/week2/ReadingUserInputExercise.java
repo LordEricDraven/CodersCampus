@@ -6,21 +6,24 @@ public class ReadingUserInputExercise {
 
 	public static void main (String[] args) {
 	
+		GetNumber userNumber = new GetNumber();
 		
+		//System.out.println("Type a number between 50 and 300.");
+		//userNumber.getInput();
+		//Integer convertedInput = Integer.parseInt(userInput);
 		
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Type a number between 50 and 300.");
-		String userInput = scanner.nextLine();
+		Integer methodOutput = userNumber.getInput();
 		
-		Integer convertedInput = Integer.parseInt(userInput);
-		
-		
-		
-		if( convertedInput >= 50 && convertedInput <= 300) {
-			System.out.println("Yes!");
+		if( methodOutput >= 50 && methodOutput <= 300) {
+			System.out.println("The number you typed in was: " + methodOutput);
+		}
+		else if( methodOutput == 0){
+			System.out.println("The number you typed in was: null");
 		}
 		else {
-			System.out.println("No!");
+			System.out.println("How did we get here?");
 		}
+		
+		
 	}	
 }
