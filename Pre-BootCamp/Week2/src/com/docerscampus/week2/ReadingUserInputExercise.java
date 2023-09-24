@@ -12,14 +12,14 @@ public class ReadingUserInputExercise {
 		//userNumber.getInput();
 		//Integer convertedInput = Integer.parseInt(userInput);
 		
-		Integer methodOutput = userNumber.getInput();
+		Integer methodOutput = userNumber.getInput2();
 		
 		if( methodOutput >= 50 && methodOutput <= 300) {
 			System.out.println("The number you typed in was: " + methodOutput);
 		}
-		else if( methodOutput == 0){
-			System.out.println("The number you typed in was: null");
-		}
+//		else if( methodOutput == 0){
+//			System.out.println("The number you typed in was: null");
+//		}
 		else {
 			System.out.println("How did we get here?");
 		}
