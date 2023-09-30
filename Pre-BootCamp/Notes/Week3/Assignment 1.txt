@@ -1,0 +1,40 @@
+1. Collect inputs
+	- What's the initial investment amount? 2000
+	- What's the interest rate? 0.11
+	
+Calculate year of compounding interest
+Calculate year of compounding interest
+Calculate year of compounding interest
+Calculate year of compounding interest
+Calculate year of compounding interest
+Output year results
+Calculate year of compounding interest
+Calculate year of compounding interest
+Calculate year of compounding interest
+Calculate year of compounding interest
+Calculate year of compounding interest
+Output year results
+Calculate year of compounding interest
+Calculate year of compounding interest
+Calculate year of compounding interest
+Calculate year of compounding interest
+Calculate year of compounding interest
+Output year results
+Calculate year of compounding interest
+Calculate year of compounding interest
+Calculate year of compounding interest
+Calculate year of compounding interest
+Calculate year of compounding interest
+Output year results
+Calculate year of compounding interest
+Calculate year of compounding interest
+Calculate year of compounding interest
+Calculate year of compounding interest
+Calculate year of compounding interest
+Output year results
+Calculate year of compounding interest
+Calculate year of compounding interest
+Calculate year of compounding interest
+Calculate year of compounding interest
+Calculate year of compounding interest
+Output year results
