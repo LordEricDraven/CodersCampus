@@ -12,7 +12,7 @@
     color: #ffffff;
 }
 
-input[type='button'] {
+input[type='button'], input[type='submit'] {
     padding: 5px;
 }
 
