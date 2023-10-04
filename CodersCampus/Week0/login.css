@@ -2,6 +2,7 @@ label {
     width: 60px;
     display: block !important;
 }
-div {
+
+.div-pad {
     margin-top: 10px;
 }
