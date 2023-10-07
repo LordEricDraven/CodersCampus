@@ -6,6 +6,19 @@ public class Human {
 	String weight;
 	String eyeColor;
 	
+	// Call the no arg constructor
+	Human () {
+		System.out.println("A human is being created");
+	}
+	
+	// Call the 4 arg constructor
+	Human (String gender, String height, String weight, String eyeColor) {
+		this.gender = gender;
+		this.height = height;
+		this.weight = weight;
+		this.eyeColor = eyeColor;
+	}
+	
 	// (visibility modifier), return type, method name, parameters, scope
 	
 	String getInfo () {
@@ -13,10 +26,4 @@ public class Human {
 				+ eyeColor + ", Weight " + weight;
 	}
 	
-	void setProperties (String gender, String height, String weight, String eyeColor) {
-		this.gender = gender;
-		this.height = height;
-		this.weight = weight;
-		this.eyeColor = eyeColor;
-	}
 }
