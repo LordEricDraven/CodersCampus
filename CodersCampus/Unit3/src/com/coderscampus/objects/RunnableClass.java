@@ -1,5 +1,7 @@
 package com.coderscampus.objects;
 
+import java.util.Random;
+
 public class RunnableClass {
 
 	public static void main(String[] args) {
@@ -7,7 +9,15 @@ public class RunnableClass {
 		// Object -> a Noun, it's an instantiation of a class
 		
 		// Data type, variable name, assignment operation
-		int someNumber = 39;
+		 
+		Random random = new Random();
+		
+		for (int i = 0; i<20; i = i + 1) {
+			System.out.println("Random number is " + random.nextInt(10));
+			
+		}
+
+		
 		
 		Human trevorPage = new Human();
 		
