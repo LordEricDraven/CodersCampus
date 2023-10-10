@@ -6,7 +6,7 @@ public class Human {
 	static int ADULT_AGE = 19;
 	static int SENIOR_AGE = 65;
 	// instance variable
-	int age;
+	private int age;
 	
 	public String getStageOfLife() {
 		if (age < TEENAGER_AGE) {
