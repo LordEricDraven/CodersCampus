@@ -15,11 +15,11 @@ public class StaticExample {
 		}
 		
 		Human aChild = new Human();
-		aChild.age = 12;
+		aChild.setAge(12);
 		System.out.println(aChild.getStageOfLife());
 		
 		Human anAdult = new Human();
-		anAdult.age = 19;
+		anAdult.setAge(19);
 		System.out.println(anAdult.getStageOfLife());
 	}
 
