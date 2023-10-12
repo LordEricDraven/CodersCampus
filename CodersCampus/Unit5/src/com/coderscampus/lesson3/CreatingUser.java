@@ -13,8 +13,7 @@ public class CreatingUser {
 		System.out.println("The password is: " + newUser.getPassword());
 		newUser.setName("Chris");
 		System.out.println("The name is: " + newUser.getName());
-		
-		
+
 		
 	}
 
