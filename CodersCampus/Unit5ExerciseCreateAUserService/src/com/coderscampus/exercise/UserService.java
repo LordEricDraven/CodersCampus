@@ -5,7 +5,7 @@ public class UserService {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 	
-		
+		String fullInput = "exampleUsername,examplePassword,exampleName";
 
 		String stringInput[] = new String[3];
 		
@@ -14,6 +14,13 @@ public class UserService {
 		stringInput[2] = "Somebodies Name";
 
 		createUser(stringInput);
+		
+		String[] arrayOutput = parseText(fullInput);
+		
+		for(String output : arrayOutput) {
+			System.out.println(output);
+		
+		}
 	}
 	
 		
@@ -29,6 +36,16 @@ public class UserService {
 		user.setName(name);
 		
 		System.out.println("Username: " + username + "    Password: " + password + "    Name: " + name);
+		
 	}
+	
+	public static String[] parseText(String input) {
+		
+		String[] newArray = input.split(",");
+		
+		return newArray;
+		
+	}
+		
 	
 }
