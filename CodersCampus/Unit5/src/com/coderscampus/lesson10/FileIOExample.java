@@ -13,7 +13,21 @@ public class FileIOExample {
 		
 		try {
 			fileReader = new BufferedReader(new FileReader("data.txt"));
-			System.out.println(fileReader.toString());
+			
+			String line;
+			while ((line = fileReader.readLine()) != null) {
+				System.out.println(line);
+			}
+			
+//			System.out.println(fileReader.readLine());
+//			System.out.println(fileReader.readLine());
+//			System.out.println(fileReader.readLine());
+//			System.out.println(fileReader.readLine());
+//			System.out.println(fileReader.readLine());
+//			System.out.println(fileReader.readLine());
+//			System.out.println(fileReader.readLine());
+//			System.out.println(fileReader.readLine());
+//			System.out.println(fileReader.readLine());
 		} catch (FileNotFoundException e) {
 			System.out.println("Oops, file not found");
 			e.printStackTrace();
