@@ -8,5 +8,9 @@ public class QuantumPhysicsTeacher extends PhysicsTeacher {
 		this.setLevelOfEducation("PhD");
 	}
 	
+	public void teach () {
+		System.out.println("I'm a quantum physics teacher, and I'm now in a super-position of teaching.");
+	}
+	
 
 }
