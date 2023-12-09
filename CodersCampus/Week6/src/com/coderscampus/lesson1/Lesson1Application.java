@@ -8,14 +8,14 @@ public class Lesson1Application {
 		
 		System.out.println(physicsTeacher.getClasses());
 		System.out.println(physicsTeacher.getLevelOfEducation());
-		physicsTeacher.teach();
+		physicsTeacher.teach("Trevor Page");
 		System.out.println("----");
 		
 		
 		Teacher compSciTeacher = new CompSciTeacher();
 		System.out.println(compSciTeacher.getClasses());
 		System.out.println(compSciTeacher.getLevelOfEducation());
-		compSciTeacher.teach();
+		compSciTeacher.teach(36);
 		System.out.println("----");
 		
 		Teacher quantumTeacher = new QuantumPhysicsTeacher();
