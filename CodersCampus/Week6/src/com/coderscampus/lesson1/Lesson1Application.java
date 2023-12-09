@@ -6,9 +6,15 @@ public class Lesson1Application {
 
 		Teacher physicsTeacher = new PhysicsTeacher();
 		
+		// This is an alternative way of casting, but it is more verbose		
+//		PhysicsTeacher castedPhysicsTeacher = (PhysicsTeacher)physicsTeacher;
+//		castedPhysicsTeacher.teach("Trevor Page");
+		
 		System.out.println(physicsTeacher.getClasses());
 		System.out.println(physicsTeacher.getLevelOfEducation());
-		physicsTeacher.teach("Trevor Page");
+		
+		((PhysicsTeacher)physicsTeacher).teach("Trevor Page");
+
 		System.out.println("----");
 		
 		
