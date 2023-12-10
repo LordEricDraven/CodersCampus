@@ -4,8 +4,12 @@ public class Teacher {
 	
 	private String classes;
 	private String levelOfEducation;
+	protected int totalNumberOfMarkedPapers;
 	
 	
+	protected void markPapers () {
+		System.out.println("I'm a teacher and I'm now marking papers.");
+	}
 	
 	private void giveARaise () {
 		System.out.println("Teacher gets a raise!");
