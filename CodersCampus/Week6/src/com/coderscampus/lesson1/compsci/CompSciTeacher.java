@@ -1,4 +1,6 @@
-package com.coderscampus.lesson1;
+package com.coderscampus.lesson1.compsci;
+
+import com.coderscampus.lesson1.Teacher;
 
 public class CompSciTeacher extends Teacher {
 

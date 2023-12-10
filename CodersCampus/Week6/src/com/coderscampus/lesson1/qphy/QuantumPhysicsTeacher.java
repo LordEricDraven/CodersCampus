@@ -1,4 +1,6 @@
-package com.coderscampus.lesson1;
+package com.coderscampus.lesson1.qphy;
+
+import com.coderscampus.lesson1.phys.PhysicsTeacher;
 
 public class QuantumPhysicsTeacher extends PhysicsTeacher {
 	
