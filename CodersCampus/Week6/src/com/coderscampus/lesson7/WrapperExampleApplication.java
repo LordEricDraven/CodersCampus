@@ -16,6 +16,7 @@ public class WrapperExampleApplication {
 		
 		int primitiveInt = 9;
 		Integer wrapperInt = 9; // auto-boxing
+		primitiveInt = Integer.valueOf(9); // un-boxing
 		
 		String someNumber = "123";
 		String someOtherNumber = "456";
