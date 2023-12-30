@@ -1,8 +1,12 @@
 package com.coderscampus.lesson5;
 
-public class Person implements Comparable<Person>{
+import java.io.Serializable;
+
+public class Person implements Comparable<Person>, Serializable {
+	private static final long serialVersionUID = 1L;
 	private String name;
 	private Integer height;
+
 	
 	public Person(String name, Integer height) {
 		this.name = name;
@@ -40,5 +44,6 @@ public class Person implements Comparable<Person>{
 //			return 1;
 //		}
 	}
-	
+
+
 }
