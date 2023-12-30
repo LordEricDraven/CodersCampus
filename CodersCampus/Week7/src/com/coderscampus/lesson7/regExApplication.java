@@ -10,10 +10,20 @@ public class regExApplication {
 		//valid email address: trevor-page.2@gmail.com
 		//valid email address: Trevor@CraftyCodr.com
 		
-		String input = "fake.email@gmail.com";
-		boolean matchFound = input.matches("[a-z]+.?[a-z]+@[a-z]+.[a-z]{1,5}");
 		
-		System.out.println(matchFound);
+		inputMatchesRegExPattern("fake.email@gmail.com");
+		inputMatchesRegExPattern("trevorcraftycodr.com");
+		inputMatchesRegExPattern("trevor@craftycodr.thisisntarealdomain");
+		inputMatchesRegExPattern("trevor@craftycodr.com");
+		inputMatchesRegExPattern("trevor-page.2@gmail.com");
+		inputMatchesRegExPattern("Trevor@CraftyCodr.com");
+		
+	}
+
+	private static void inputMatchesRegExPattern(String input) {
+		boolean matchFound = input.matches("^[a-zA-Z0-9][a-zA-Z0-9-]{0,}\\.?[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z]{1,5}$");
+		
+		System.out.println("For Input " + input + ", match found = " + matchFound);
 	}
 
 }
