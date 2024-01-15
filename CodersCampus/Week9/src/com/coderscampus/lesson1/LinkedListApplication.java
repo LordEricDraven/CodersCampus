@@ -10,9 +10,9 @@ public class LinkedListApplication {
 
 		//
 		// LinkedList
-		// Head = 1		Head = 0	 Head = 0	  Head = 0 
-		// Tail = 0	<->	Tail = 0 <-> Tail = 0 <-> Tail = 1
-		// (10)			 (20)		 (30)		   (40)
+		// ********		Head = 0	 ********	  Head = 0 
+		// ********	***	Tail = 0 <--------------> Tail = 1
+		// ****			 (20)		 *****		   (40)
 		//
 		
 		numbers.add(10);
