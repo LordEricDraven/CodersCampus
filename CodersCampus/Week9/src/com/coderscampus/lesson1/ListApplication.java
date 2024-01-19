@@ -1,11 +1,56 @@
 package com.coderscampus.lesson1;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class ListApplication {
 
 	public static void main(String[] args) {
+		
+		List<String> names = new ArrayList<String>();
+		names.add("Trevor Page");
+		names.add("John Doe");
+		names.add("Jane Doe");
+		names.add("Elon Musk");
+		names.add("Chris Flamion");
+		names.add("Josh Someone");
+		
+		Collections.sort(names, new Comparator<String>() {
+
+			@Override
+			public int compare(String o1, String o2) {
+				return o2.compareTo(o1);
+			}
+			
+		});
+		
+		// example 1 of creating a lambda expression
+		Collections.sort(names, (o1, o2) -> o2.compareTo(o1));
+
+		// example 2, slightly more "verbose"
+		Collections.sort(names, (String o1, String o2) -> o2.compareTo(o1));
+		
+		// example 3, even more "verbose", note: not the same functionality as above
+		// because we're doing some null checks
+		Collections.sort(names, (String o1, String o2) -> {
+			if(o2 != null && o1 != null) {
+				return o2.compareTo(o1);
+			} else {
+				return 0;
+			}
+			
+		});
+				
+		
+		
+		printArrayListToConsole(names);
+		
+		//example1();
+	}
+
+	private static void example1() {
 		String[] names = new String[4];
 		
 		names[0] = "Trevor Page";
@@ -44,7 +89,6 @@ public class ListApplication {
 		
 		elements.remove("Josh Someone");
 		printArrayListToConsole(elements);
-		
 	}
 
 	private static void printArrayListToConsole(List<String> elements) {
