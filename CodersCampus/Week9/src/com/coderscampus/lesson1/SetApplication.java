@@ -8,6 +8,26 @@ import java.util.Set;
 public class SetApplication {
 	
 	public static void main(String[] args) {
+		
+		Set<Person> people = new HashSet<>();
+		
+		people.add(new Person(111111111, "Trevor", "Page"));
+		people.add(new Person(111111111, "Trevor2", "Page2"));
+		people.add(new Person(111111112, "Trevor2", "Page2"));
+		
+		for(Person person : people) {
+			System.out.println(person);
+		}
+		
+		
+		//example1();
+		
+		}
+
+
+
+
+	private static void example1() {
 		Set<Integer> uniqueNumbers = new LinkedHashSet<>(); // LinkedHashSet - Sets do not allow duplicates & LinkedHashSet keeps items in order that they were added
 		
 		System.out.println(uniqueNumbers.add(1));
@@ -28,8 +48,7 @@ public class SetApplication {
 		uniqueNames.add("Chris Flamion");
 		
 		printHashSetToConsole(uniqueNames);
-		
-		}
+	}
 	
 	
 	
