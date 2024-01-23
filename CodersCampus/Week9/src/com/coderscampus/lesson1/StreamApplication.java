@@ -6,12 +6,24 @@ import java.util.HashSet;
 import java.util.IntSummaryStatistics;
 import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 import java.util.stream.Collectors;
 
 public class StreamApplication {
 
 	public static void main(String[] args) {
+		
+		
+		
+		
+//		example3();
+		Example2();
+//		Example1();
+	}
+
+	private static void example3() {
 		List<List<Integer>> listOfNumbersList = new ArrayList<>();
 		listOfNumbersList.add(Arrays.asList(1, 2, 3)); 
 		listOfNumbersList.add(Arrays.asList(2, 3, 4));	
@@ -28,8 +40,6 @@ public class StreamApplication {
 		System.out.println("Max: " + sumStats.getMax());
 		System.out.println("Min: " + sumStats.getMin());
 		System.out.println("Count: " + sumStats.getCount());
-//		Example2();
-//		Example1();
 	}
 
 	private static void Example2() {
@@ -43,6 +53,35 @@ public class StreamApplication {
 		cars.add(new Car("Ford", "F150", 2017));
 		cars.add(new Car("Toyota", "Corolla", 1997));
 		cars.add(new Car("Toyota", "Celica", 2002));
+		
+		// Tesla, Ford, Toyota
+		// Tesla -> ["Model S 2019", "Model S 2018", "Model X 2016", :"Model 3 2019"]
+		// Ford -> ["F150 2017"]
+		// Toyota -> ["Corolla 1997", "Celica 2002"]
+		
+		
+		
+		Map<String, List<Car>> groupedByBrand = cars.stream()
+			.collect(Collectors.groupingBy((car) -> car.getBrand()));
+		
+		System.out.println(groupedByBrand);
+		
+		Set<Entry<String, List<Car>>> entrySet = groupedByBrand.entrySet();
+		
+		System.out.println(entrySet);
+		
+		entrySet.stream()
+				.forEach((entry) -> {
+					System.out.println(entry.getKey() + " -> " + entry.getValue());
+				});
+		
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("------------------------------------");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
 		
 		List<String> models = cars.stream()
 								  .map(car -> car.getModel())
@@ -94,7 +133,7 @@ public class StreamApplication {
 //			System.out.println(name);
 //		}
 		
-		names.stream()
+		names.parallelStream()
 			 .forEach(name -> System.out.println(name));
 	}
 
