@@ -54,6 +54,9 @@ public class StreamApplication {
 		cars.add(new Car("Toyota", "Corolla", 1997));
 		cars.add(new Car("Toyota", "Celica", 2002));
 		
+		///////////////////////////////////////////////////////////////////////
+		//// 					Grouping with Streams					   ////
+		///////////////////////////////////////////////////////////////////////
 		// Tesla, Ford, Toyota
 		// Tesla -> ["Model S 2019", "Model S 2018", "Model X 2016", :"Model 3 2019"]
 		// Ford -> ["F150 2017"]
