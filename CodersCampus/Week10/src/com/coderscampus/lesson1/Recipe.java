@@ -7,6 +7,7 @@ public class Recipe {
 	private String name;
 	private String instructions;
 	private Optional<BigDecimal> priceOpt = Optional.empty();
+	private Optional<Integer> intOpt = Optional.empty();
 	
 	
 	public String getName() {
