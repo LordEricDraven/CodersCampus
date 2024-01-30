@@ -20,14 +20,22 @@ public class OptionalApplication {
 
 		System.out.println(cookies);
 		
+		// Good way to get the wrapped data in Optional
 		BigDecimal price = cookies.getPriceOpt()
 								  .map(p -> p)
 								  .orElse(new BigDecimal(0));
 		
+		// "Bad" way to get the wrapped data in Optional
 //		if (cookies.getPriceOpt().isPresent()) {
 //			BigDecimal price = cookies.getPriceOpt().get();
 //			System.out.println(price);
 //		}
+		
+		
+		cookies.setPriceOpt(new BigDecimal(20.00));
+		// Lesson 4
+		cookies.getPriceOpt()
+			   .ifPresent(RecipeService::billClient);
 	}
 
 }
