@@ -1,5 +1,6 @@
 package com.coderscampus.lesson1;
 
+import java.math.BigDecimal;
 import java.util.Optional;
 
 public class OptionalApplication {
@@ -12,11 +13,21 @@ public class OptionalApplication {
 		System.out.println(trevor);
 		
 		// Lesson 2+
-		Recipe recipe = new Recipe();
-		recipe.setName("Chocolate Chip Cookies");
-		recipe.setInstructions("1. Pre-heat oven\n2. Put dough on baking sheet\n3. Cook dough for 15 minutes");
+		Recipe cookies = new Recipe();
+		cookies.setName("Chocolate Chip Cookies");
+		cookies.setInstructions("1. Pre-heat oven\n2. Put dough on baking sheet\n3. Cook dough for 15 minutes");
+//		cookies.setPriceOpt(new BigDecimal(9.99));
 
-		System.out.println(recipe);
+		System.out.println(cookies);
+		
+		BigDecimal price = cookies.getPriceOpt()
+								  .map(p -> p)
+								  .orElse(new BigDecimal(0));
+		
+//		if (cookies.getPriceOpt().isPresent()) {
+//			BigDecimal price = cookies.getPriceOpt().get();
+//			System.out.println(price);
+//		}
 	}
 
 }
