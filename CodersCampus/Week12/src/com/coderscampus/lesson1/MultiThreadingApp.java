@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ForkJoinPool;
 
 public class MultiThreadingApp {
 	
@@ -27,6 +28,10 @@ public class MultiThreadingApp {
 //		ExecutorService executor = Executors.newSingleThreadExecutor();
 		
 		List<CompletableFuture<Void>> tasks = new ArrayList<>();
+		
+		// This is how you get access to the ForkJoinPool's common pool,
+		// which is the default thread pool that's used with CompletableFutures
+//		ForkJoinPool commonPool = ForkJoinPool.commonPool();
 		
 		for (int i=0; i<20; i++) {
 			CompletableFuture<Void> task = CompletableFuture.supplyAsync(() -> new SomeTask())
