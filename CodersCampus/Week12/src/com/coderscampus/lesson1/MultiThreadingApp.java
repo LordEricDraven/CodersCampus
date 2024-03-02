@@ -1,9 +1,9 @@
 package com.coderscampus.lesson1;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
 
 public class MultiThreadingApp {
 	
@@ -24,17 +24,34 @@ public class MultiThreadingApp {
 		// For a CPU bound operation like we have in our "SomeTask" class,
 		// we should make use of an ExecutorService
 		
-		ExecutorService service = Executors.newSingleThreadExecutor();
+//		ExecutorService executor = Executors.newSingleThreadExecutor();
 		
-		for (int i=0; i<50; i++) {
-			Future<TaskDto> futureTask = service.submit(new SomeTask());
-			System.out.println(futureTask.get());
+		List<CompletableFuture<Void>> tasks = new ArrayList<>();
+		
+		for (int i=0; i<20; i++) {
+			CompletableFuture<Void> task = CompletableFuture.supplyAsync(() -> new SomeTask())
+							 .thenApply(someTask -> someTask.call())
+							 .thenAccept(dto -> System.out.println(dto));
+			
+			// Futures were great prior to Java 8, but now we have something
+			// better
+//			Future<TaskDto> futureTask = service.submit(new SomeTask());
+//			System.out.println(futureTask.get());
+			
+			
 		}
 		
 		message = "Done";
 		System.out.println(message);
+		
+		while (tasks.stream()
+					.filter(CompletableFuture::isDone)
+					.count() < 20) {
+					// this just loops and keeps the main thread alive
+					// until all threads are done working
+					}
+				}
 	}
 	
 	
-	
-}
+
