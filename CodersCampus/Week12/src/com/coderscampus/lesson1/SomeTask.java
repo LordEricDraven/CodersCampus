@@ -9,7 +9,7 @@ class SomeTask implements Callable<TaskDto>{
 
 
 	@Override
-	public TaskDto call() throws Exception {
+	public TaskDto call(){
 		TaskDto taskDto = new TaskDto();
 		
 		for(int i = 0; i < 10000000; i++) {
