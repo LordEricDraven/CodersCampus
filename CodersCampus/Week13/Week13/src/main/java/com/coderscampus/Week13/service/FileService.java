@@ -9,8 +9,18 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class FileService {
-
-	public List<String> readFile(String filename) throws IOException{
-		return Files.readAllLines(Paths.get(filename));
+	private String fileName;
+	
+	public FileService() {
+		// this is just a blank
+	}
+	
+	public FileService(String fileName) {
+		this.fileName = fileName;
+	}
+	
+	
+	public List<String> readFile() throws IOException{
+		return Files.readAllLines(Paths.get(fileName));
 	}
 }
