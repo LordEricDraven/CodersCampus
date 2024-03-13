@@ -1,13 +1,15 @@
-package com.coderscampus;
+package com.coderscampus.Week13.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 
 import com.coderscampus.Week13.Domain.User;
 import com.coderscampus.Week13.service.FileService;
 
 @Configuration
-public class Week13Configuration {
+@Profile("dev")
+public class Week13DevConfiguration {
 
 	// For illustration purposes only as an example of a real 
 	// world type scenario of connecting to a database
@@ -26,7 +28,12 @@ public class Week13Configuration {
 	}
 	
 	@Bean
-	public User user() {
+	public User superUser() {
 		return new User("trevor@craftycodr.com", "abc123", "Trevor Page");
+	}
+	
+	@Bean
+	public User regularUser() {
+		return new User("regular_joe@gmail.com", "joe123", "Joe Blow");
 	}
 }
