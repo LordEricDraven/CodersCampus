@@ -3,6 +3,7 @@ package com.coderscampus.Week15.web.domain;
 public class Person {
 	private String firstName;
 	private String lastName;
+	private Integer id;
 	
 	public String getFirstName() {
 		return firstName;
@@ -16,10 +17,18 @@ public class Person {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	
 	@Override
 	public String toString() {
-		return "Person [firstName=" + firstName + ", lastName=" + lastName + "]";
+		return "Person [firstName=" + firstName + ", lastName=" + lastName + ", id=" + id + "]";
 	}
+	
 	
 	
 }
