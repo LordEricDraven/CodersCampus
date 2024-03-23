@@ -15,9 +15,15 @@ public class PersonService {
 	PersonRepository personRepo;
 	
 	public Person save(Person person) {
-		person.setId(personId++);
+		if(person.getId() == null)
+			person.setId(personId++);
+		
 		return personRepo.save(person);
 		
+	}
+
+	public Person findById(Integer personId) {
+		return personRepo.findById(personId);		
 	}
 	
 	
