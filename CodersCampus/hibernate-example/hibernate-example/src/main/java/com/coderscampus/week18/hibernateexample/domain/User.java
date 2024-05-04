@@ -49,6 +49,7 @@ public class User {
 		this.name = name;
 	}
 	
+	
 	@ManyToMany
 	@JoinTable(name = "user_account",
 			   joinColumns = @JoinColumn(name = "user_id"), 
@@ -65,6 +66,12 @@ public class User {
 	}
 	public void setAddress(Address address) {
 		this.address = address;
+	}
+	
+	@Override
+	public String toString() {
+		return "User [userId=" + userId + ", username=" + username + ", password=" + password + ", name=" + name
+				+ ", accounts=" + accounts + ", address=" + address + "]";
 	}
 	
 }
