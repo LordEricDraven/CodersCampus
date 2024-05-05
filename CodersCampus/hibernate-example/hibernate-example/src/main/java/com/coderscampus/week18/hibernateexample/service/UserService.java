@@ -27,6 +27,10 @@ public class UserService {
 	public User saveUser(User user) {
 		return userRepo.save(user);
 	}
+
+	public void delete(Long userId) {
+		userRepo.deleteById(userId);
+	}
 	
 
 }
