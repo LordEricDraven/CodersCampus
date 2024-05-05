@@ -28,7 +28,7 @@ public class UserController {
 	@PostMapping("/register")
 	public String postCreateUser(User user) {
 		System.out.println(user);
-		userService.createUser(user);
+		userService.saveUser(user);
 		return "redirect:/register";
 	}
 	
@@ -43,8 +43,14 @@ public class UserController {
 	public String getOneUser (ModelMap model, @PathVariable Long userId) {
 		User user = userService.findById(userId);
 		model.put("users", Arrays.asList(user));
+		model.put("user", user);
 		return "users";
 	}
 	
+	@PostMapping("/users/{userId}")
+	public String PostOneUser (@PathVariable Long userId, User user) {
+		userService.saveUser(user);
+		return "redirect:/users/"+user.getUserId();
+	}
 
 }
