@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import com.coderscampus.week18.hibernateexample.domain.User;
@@ -22,5 +23,7 @@ public interface UserRepository extends JpaRepository<User, Long>{
 	
 	List<User> findByCreatedDateBetween(LocalDate date1, LocalDate date2);
 	
+	@Query("select u from User u where username = :username")
+	List<User> findExactlyOneUserByUsername(String username);
 	
 }
