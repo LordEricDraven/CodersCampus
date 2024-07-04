@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -64,7 +65,7 @@ public class User {
 	public void setAccounts(List<Account> accounts) {
 		this.accounts = accounts;
 	}
-	@OneToOne(mappedBy = "user")
+	@OneToOne(mappedBy = "user", cascade = {CascadeType.MERGE, CascadeType.PERSIST})
 	public Address getAddress() {
 		return address;
 	}

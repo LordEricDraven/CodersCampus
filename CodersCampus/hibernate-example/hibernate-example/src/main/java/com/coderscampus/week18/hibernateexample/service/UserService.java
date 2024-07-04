@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.coderscampus.week18.hibernateexample.domain.Account;
+import com.coderscampus.week18.hibernateexample.domain.Address;
 import com.coderscampus.week18.hibernateexample.domain.User;
 import com.coderscampus.week18.hibernateexample.repository.AccountRepository;
 import com.coderscampus.week18.hibernateexample.repository.UserRepository;
@@ -64,6 +65,23 @@ public class UserService {
 			user.getAccounts().add(savings);
 			accountRepo.save(checking);
 			accountRepo.save(savings);
+		}
+		
+		// CascadeTypes => PERSIST, MERGE, REMOVE 
+		// PERSIST new User() <-> new Address() --> saveUser
+		// MERGE existingUser -> new/updating Address() --> saveUser
+		// REMOVE existingUser -> setAddress(null) --> saveUser
+		if(user.getAddress() == null) {
+			Address address = new Address();
+			address.setAddressLine1("123 Fake st");
+			address.setAddressLine2("Unit 4");
+			address.setCity("Some City");
+			address.setCountry("Some Country");
+			address.setRegion("Some Region");
+			address.setZipCode("12345");
+			address.setUser(user);
+			address.setUserId(user.getUserId());
+			user.setAddress(address);
 		}
 		return userRepo.save(user);
 	}
