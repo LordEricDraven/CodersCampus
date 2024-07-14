@@ -2,41 +2,6 @@
 <html xmlns:th="http://thymeleaf.org">
 	<head>
 		<title>Login</title>
-		<script type="text/javascript">
-			var name = 'Trevor Page'
-			var age = 37
-			
-			console.log('Hello world! My name is ' + name + ' and I am ' + age + ' years old')
-			console.log(`Hello world! My name is ${name} and I am ${age} years old`)
-			
-			var car
-			var tesla = null
-			
-			console.log(`The value of "car" is ${car}, the data type is ${typeof car}`) // undefined
-			console.log(`The value of "tesla" is ${tesla}, the data type is ${typeof tesla}`)
-			console.log(`The value of "age" is ${age}, the data type is ${typeof age}`)
-			console.log(`The value of "tesla" is ${name}, the data type is ${typeof name}`)
-			console.log(`What is 5 + 10 = ${5+10}`)
-			
-			var addition = 5 + 15
-			console.log(`addition = ${addition}`)
-			
-			var person = {
-				'firstName': 'Trevor',
-				'lastName': 'Page',
-				'age': 37,
-				'address': {
-					'line1': '123 Fake St',
-					'line2': 'unit 45', 
-					'city' : 'Toronto',
-					'prov': 'ontario'
-				} 
-			}
-			console.log(`The value of 'person' is: ${person}, the data type is ${typeof person}`)
-			console.log(person)
-			
-			
-		</script>
 	</head>
 	<body>
 		<h1>Login Below</h1>
@@ -51,29 +16,17 @@
 		</div>
 		<script type="text/javascript">
 			var submitBtn = document.querySelector("#submitBtn")
-			console.log(`submitBTN is:`)
-			console.log(submitBtn)
 			
-			submitBtn.addEventListener('click', submitBtnClick)
-			
-			submitBtn.addEventListener('mouseover', function (){
-				alert(`Hey! I've been mouse-overed`)
+			submitBtn.addEventListener('click', () => {
+				var username = document.querySelector("#username")
+				var password = document.querySelector("#password")
+				
+				if(username.value == '' && password.value == ''){
+					alert(`Please enter a valid username and a password`)
+				} else {
+					console.log(`Inputs look valid, proceed with form submission`)
+				}
 			})
-			
-			var usernameTextbox = document.querySelector("#username")
-			usernameTextbox.addEventListener('focus', function () {
-				console.log(`the username textbox now has focus`)
-			})
-			
-			// This is another way to do the same username textbox event
-			// var usernameTextbox = document.querySelector("#username")
-			// usernameTextbox.addEventListener('focus', () =>
-			//  	console.log(`the username textbox now has focus`))
-			
-			// public void myMethod () {} -- This is Java code for comparison
-			function submitBtnClick (){
-				alert(`Hey! I've been clicked`)
-			}
 		</script>
 	</body>
 </html>
