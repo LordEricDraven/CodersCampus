@@ -41,10 +41,10 @@
 	<body>
 		<h1>Login Below</h1>
 		<div>
-			Username: <input type="text" th:field="${user.username}" id="usernameIn"/>
+			Username: <input type="text" th:field="${user.username}"/>
 		</div>
 		<div>
-			Password: <input type="password" th:field="${user.password}" id="passwordIn"/>
+			Password: <input type="password" th:field="${user.password}"/>
 		</div>
 		<div>
 			<button type="button" id="submitBtn">Submit</button>
@@ -56,8 +56,21 @@
 			
 			submitBtn.addEventListener('click', submitBtnClick)
 			
+			submitBtn.addEventListener('mouseover', function (){
+				alert(`Hey! I've been mouse-overed`)
+			})
+			
+			var usernameTextbox = document.querySelector("#username")
+			usernameTextbox.addEventListener('focus', function () {
+				console.log(`the username textbox now has focus`)
+			})
+			
+			// This is another way to do the same username textbox event
+			// var usernameTextbox = document.querySelector("#username")
+			// usernameTextbox.addEventListener('focus', () =>
+			//  	console.log(`the username textbox now has focus`))
+			
 			// public void myMethod () {} -- This is Java code for comparison
-			// 
 			function submitBtnClick (){
 				alert(`Hey! I've been clicked`)
 			}
