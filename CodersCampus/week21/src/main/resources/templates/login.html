@@ -6,8 +6,8 @@
 			var name = 'Trevor Page'
 			var age = 37
 			
-			alert('Hello world! My name is ' + name + ' and I am ' + age + ' years old')
-			alert(`Hello world! My name is ${name} and I am ${age} years old`)
+			console.log('Hello world! My name is ' + name + ' and I am ' + age + ' years old')
+			console.log(`Hello world! My name is ${name} and I am ${age} years old`)
 			
 			var car
 			var tesla = null
@@ -34,15 +34,25 @@
 			}
 			console.log(`The value of 'person' is: ${person}, the data type is ${typeof person}`)
 			console.log(person)
+			
+			
 		</script>
 	</head>
 	<body>
 		<h1>Login Below</h1>
 		<div>
-			Username: <input type="text" th:field="${user.username}"/>
+			Username: <input type="text" th:field="${user.username}" id="usernameIn"/>
 		</div>
 		<div>
-			Password: <input type="password" th:field="${user.password}"/>
+			Password: <input type="password" th:field="${user.password}" id="passwordIn"/>
 		</div>
+		<div>
+			<button type="button" id="submitBtn">Submit</button>
+		</div>
+		<script type="text/javascript">
+			var submitBtn = document.querySelector("#submitBtn")
+			console.log(`submitBTN is:`)
+			console.log(submitBtn)
+		</script>
 	</body>
 </html>
