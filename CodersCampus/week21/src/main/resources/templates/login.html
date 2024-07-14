@@ -53,6 +53,14 @@
 			var submitBtn = document.querySelector("#submitBtn")
 			console.log(`submitBTN is:`)
 			console.log(submitBtn)
+			
+			submitBtn.addEventListener('click', submitBtnClick)
+			
+			// public void myMethod () {} -- This is Java code for comparison
+			// 
+			function submitBtnClick (){
+				alert(`Hey! I've been clicked`)
+			}
 		</script>
 	</body>
 </html>
