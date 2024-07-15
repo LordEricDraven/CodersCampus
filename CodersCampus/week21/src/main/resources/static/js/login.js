@@ -1,4 +1,5 @@
 var submitBtn = document.querySelector("#submitBtn")
+var username =document.querySelector("#username")
 var users = []
 			
 submitBtn.addEventListener('click', () => {
@@ -16,4 +17,11 @@ submitBtn.addEventListener('click', () => {
 		
 		users.push(user)
 	}
+})
+
+username.addEventListener('blur', () => {
+	fetch('http://localhost:8080/users/exists')
+		.then((response) =>{
+			console.log(response)
+		})
 })

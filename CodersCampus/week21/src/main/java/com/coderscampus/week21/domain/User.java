@@ -1,4 +1,4 @@
-package com.coderscampus.week21.web;
+package com.coderscampus.week21.domain;
 
 public class User {
 
