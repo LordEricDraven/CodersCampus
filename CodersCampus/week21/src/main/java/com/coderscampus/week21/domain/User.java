@@ -1,5 +1,6 @@
 package com.coderscampus.week21.domain;
 
+
 public class User {
 
 
