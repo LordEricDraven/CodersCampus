@@ -8,4 +8,8 @@ import com.coderscampus.week22.domain.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long>{
 
+	// automagically creates a SQL select statement
+	//   select* from users where username = :username
+	User findByUsername(String username);
+
 }
