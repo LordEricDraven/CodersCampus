@@ -1,10 +1,10 @@
-package com.coderscampus.week21.web;
+package com.coderscampus.week22.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.coderscampus.week21.domain.User;
+import com.coderscampus.week22.domain.User;
 
 @Controller
 public class LoginController {
