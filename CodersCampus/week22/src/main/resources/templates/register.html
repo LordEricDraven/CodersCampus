@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html xmlns:th="http://thymeleaf.org">
 	<head>
-		
+		<title>Register</title>
+		<script src="https://kit.fontawesome.com/f4b5d87e8d.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<h2>Register Below</h2>
 		<form action="" method="post">
 			<div>
 				<label>Username</label>
-				<input type="text" th:field="${user.username}"/>
+				<input type="text" th:field="${user.username}" id="username"/>
 			</div>
 			<div>
 				<label>Password</label>
-				<input type="password" th:field="${user.password}"/>
+				<input type="password" th:field="${user.password}" id="password"/> <i id="passwordEyeIcon" class="fa-regular fa-eye"></i>
 			</div>
 			<div>
 				<label>Confirm Password</label>
-				<input type="password" id="confirmPassword"/>
+				<input type="password" id="confirmPassword"/> <i id="confirmPasswordEyeIcon" class="fa-regular fa-eye"></i>
 			</div>
 			<button>Create Account</button>
 		</form>
