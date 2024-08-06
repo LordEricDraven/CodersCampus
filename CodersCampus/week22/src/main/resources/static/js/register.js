@@ -35,7 +35,7 @@ function myPromise (){
 		}
 	})
 }
-
+// Git update test
 //For demonstration purposes only
 //myPromise().then((message) => {
 //	console.log(message)
