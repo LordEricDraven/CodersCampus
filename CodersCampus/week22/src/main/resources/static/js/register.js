@@ -24,6 +24,7 @@ eyeIcons.forEach((eyeIcon) => {
 })
 
 // This is for demonstration purposes
+// git test
 function myPromise (){
 	return new Promise( (resolve, reject) => {
 		let i = 2
